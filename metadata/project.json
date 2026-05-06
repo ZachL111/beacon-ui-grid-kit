@@ -1,0 +1,32 @@
+{
+  "index": 453,
+  "phase": 2,
+  "batch": 51,
+  "name": "beacon-ui-grid-kit",
+  "planned_name": "beacon-ui-grid-kit",
+  "language": "Lua",
+  "category": "Frontend apps",
+  "goal": "Develop a Lua command-oriented project for grid scenarios with seeded input scenarios, deterministic summary checks, and fixture-scale datasets.",
+  "repository_url": "https://github.com/ZachL111/beacon-ui-grid-kit",
+  "verification_command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1",
+  "model": {
+    "inputs": [
+      "demand",
+      "capacity",
+      "latency",
+      "risk",
+      "weight"
+    ],
+    "threshold": 173,
+    "risk_penalty": 5,
+    "latency_penalty": 2,
+    "weight_bonus": 5,
+    "decision_rule": "accept when score is greater than or equal to threshold, otherwise review"
+  },
+  "quality_gates": [
+    "readme constraint scan",
+    "fixture presence check",
+    "metadata JSON parse",
+    "language verifier"
+  ]
+}
