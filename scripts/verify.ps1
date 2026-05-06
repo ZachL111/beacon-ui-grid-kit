@@ -59,3 +59,7 @@ foreach ($pathPattern in $knownPaths) {
 }
 
 lua tests/test_policy.lua
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-beacon-ui-grid-detail.ps1
+
+lua tests/test_domain_review.lua
